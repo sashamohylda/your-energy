@@ -1,0 +1,139 @@
+
+.page--gray {
+  background: #d9d9d9;
+}
+
+.subscribe-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.subscribe-card {
+  width: 100%;
+  max-width: 360px;
+  background: #1f1f1f;
+  color: #fff;
+  border-radius: 0; 
+  padding: 22px 18px 18px;
+}
+
+.subscribe-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subscribe-card__brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.subscribe-card__icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #1c1c1c;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  display: inline-block;
+}
+
+.subscribe-card__title {
+  margin: 18px 0 10px;
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.subscribe-card__title em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.subscribe-card__text {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.subscribe-form {
+  display: grid;
+  gap: 14px;
+  margin: 10px 0 18px;
+}
+
+.subscribe-form__input {
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  padding: 0 16px;
+  color: #fff;
+  outline: none;
+}
+
+.subscribe-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.subscribe-form__btn {
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.subscribe-card__footer {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.subscribe-card__rights {
+  margin-bottom: 10px;
+}
+
+.subscribe-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.subscribe-card__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.subscribe-sep {
+  opacity: 0.7;
+}
+
+/* утилита */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body parts</title>
+
+    <!-- общий стиль -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- стиль ТОЛЬКО для body-parts -->
+    <link rel="stylesheet" href="./css/body-parts.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <load src="./partials/header.html" />
+
+    <main>
+      <load src="./partials/body-parts-section.html" />
+    </main>
+
+    <load src="./partials/footer.html" />
+<!-- MODAL BACKDROP -->
+<div class="modal-backdrop js-modal" aria-hidden="true">
+  <div class="modal-window" role="dialog" aria-modal="true" aria-label="Exercise details">
+    <button class="modal-close js-close-modal" type="button" aria-label="Close">
+      ×
+    </button>
+
+    <!-- image -->
+<div class="modal-image">
+  <img
+    src="/img/webp/social/gif.png"
+    alt="Exercise image"
+    class="modal-image__img"
+  />
+</div>
+
+    <div class="modal-content">
+      <!-- title -->
+      <h3 class="modal-title js-modal-title">Air bike</h3>
+
+      <!-- rating row -->
+      <div class="modal-rating">
+        <span class="modal-rating__num js-modal-rating">4.0</span>
+
+        <!-- звезды: 4 желтые + 1 серая -->
+     <div class="modal-rating__stars">
+  <span class="star--active">★</span>
+  <span class="star--active">★</span>
+  <span class="star--active">★</span>
+  <span class="star--active">★</span>
+  <span class="star--inactive">★</span>
+</div>
+      </div>
+
+<div class="modal-divider modal-divider--top"></div>
+      <!-- info 4 columns -->
+      <div class="modal-info">
+        <div class="modal-info__item">
+          <div class="modal-info__label">Target</div>
+          <div class="modal-info__value js-modal-target">Abs</div>
+        </div>
+
+        <div class="modal-info__item">
+          <div class="modal-info__label">Body Part</div>
+          <div class="modal-info__value js-modal-bodypart">Waist</div>
+        </div>
+
+        <div class="modal-info__item">
+          <div class="modal-info__label">Equipment</div>
+          <div class="modal-info__value js-modal-equipment">Body weight</div>
+        </div>
+
+        <div class="modal-info__item">
+          <div class="modal-info__label">Popular</div>
+          <div class="modal-info__value js-modal-popular">150</div>
+        </div>
+      </div>
+
+
+ <div class="modal-info modal-info--burned">
+  <div class="modal-info__item">
+    <div class="modal-info__label">Burned Calories</div>
+    <div class="modal-info__value js-modal-burned">323/3 min</div>
+  </div>
+</div>
+
+<div class="modal-divider modal-divider--bottom"></div>
+      <!-- text -->
+      <p class="modal-text js-modal-text">
+        This refers to your core muscles, which include the rectus abdominis, obliques,
+        and transverse abdominis. They're essential for maintaining posture, stability,
+        and generating force in many movements. Exercises that target the abs include crunches,
+        leg raises, and planks.
+      </p>
+
+      <!-- buttons -->
+<button class="modal-btn modal-btn--white modal-fav-btn" type="button">
+  Add to favorites
+  <img
+    src="/img/webp/social/heart.png"
+    alt="Add to favorites"
+    class="modal-fav-icon"
+  />
+</button>
+
+      <button class="modal-btn modal-btn--dark" type="button">
+        Give a rating
+      </button>
+    </div>
+  </div>
+</div>
+<!-- ===== RATING MODAL ===== -->
+<div class="rating-backdrop js-rating-modal" aria-hidden="true">
+  <div class="rating-window" role="dialog" aria-modal="true" aria-label="Give a rating">
+    <button class="rating-close js-close-rating" type="button" aria-label="Close">×</button>
+
+    <div class="rating-head">
+      <p class="rating-label">Rating</p>
+
+      <div class="rating-stars" role="radiogroup" aria-label="Choose rating">
+        <!-- значение будем считать по data-value --><div class="rating">
+  <div class="rating">
+  <span class="rating-value">0.0</span>
+
+  <div class="rating-stars">
+    <span class="star is-active">★</span>
+    <span class="star is-active">★</span>
+    <span class="star is-active">★</span>
+    <span class="star is-active">★</span>
+    <span class="star">★</span>
+  </div>
+</div>
+</div>
+
+      </div>
+    </div>
+
+    <form class="rating-form js-rating-form">
+      <input
+        class="rating-input"
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        pattern="^\\w+(\\.\\w+)?@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$"
+      />
+
+      <textarea
+        class="rating-textarea"
+        name="comment"
+        placeholder="Your comment"
+        rows="4"
+      ></textarea>
+
+      <button class="rating-send" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+<script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
